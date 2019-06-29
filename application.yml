@@ -10,6 +10,6 @@ spring:
 
 ---
 spring:
-    profiles: dev  #测试环境
+    profiles: dev  #测试环境 utrt
         application:
             name: microservice-config-test
