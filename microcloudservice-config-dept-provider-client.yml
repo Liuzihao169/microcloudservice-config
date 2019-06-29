@@ -23,15 +23,19 @@ spring:
     name: provider
   resources:
     static-locations:  #对外暴露服务的名
+    
 server:
   port: 8888
+  
 mybatis:        #mybatis基本的配置
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations:
     - classpath:mybatis/mapper/DeptMapper.xml
+    
 logging:
   level:
     com.kuake.springcloud.dao: debug #设置指定包下的日志等级 【trace debug info warn error】
+    
 eureka:  #设置eureka注册服务的地址
   client:
     service-url:
@@ -42,6 +46,7 @@ eureka:  #设置eureka注册服务的地址
     prefer-ip-address: true
     
 ---
+
 spring:
   profiles: test  #生产环境
   
@@ -62,15 +67,19 @@ spring:
     name: provider
   resources:
     static-locations:  #对外暴露服务的名
+    
 server:
   port: 8888
+  
 mybatis:        #mybatis基本的配置
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations:
     - classpath:mybatis/mapper/DeptMapper.xml
+    
 logging:
   level:
     com.kuake.springcloud.dao: debug #设置指定包下的日志等级 【trace debug info warn error】
+    
 eureka:  #设置eureka注册服务的地址
   client:
     service-url:

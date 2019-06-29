@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+
+spring:
+  profiles: dev  #生产环境
+
+mybatis:        #mybatis基本的配置
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations:
+    - classpath:mybatis/mapper/DeptMapper.xml
+    
+
+---
+spring:
+  profiles: test  #生产环境
+
+
+eureka:  #设置eureka注册服务的地址
+  client:
+    service-url:
+       defaultZone:  http://eureka7004:7004/eureka,http://eureka7005:7005/eureka
+  instance:
+    instance-id: microcloudservice-provide-rdept-8001 #配置服务的别名
