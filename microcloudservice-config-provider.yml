@@ -14,8 +14,7 @@ spring:
     username: root
     password: root
     url: jdbc:mysql://localhost:3306/springcloud001
-  #   数据源其他配置
-    initialSize: 5
+    initialSize: 5   #   数据源其他配置
     minIdle: 5
     maxActive: 20
     maxWait: 60000
@@ -39,9 +38,8 @@ eureka:  #设置eureka注册服务的地址
        defaultZone:  http://eureka7004:7004/eureka,http://eureka7005:7005/eureka
   instance:
     instance-id: microcloudservice-provide-rdept-8001 #配置服务的别名
-# 注册的时候使用ip注册
-    prefer-ip-address: true
-    
+    prefer-ip-address: true   # 注册的时候使用ip注册
+     
 
 ---
 spring:
