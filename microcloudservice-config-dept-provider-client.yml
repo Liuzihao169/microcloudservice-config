@@ -21,8 +21,6 @@ spring:
     timeBetweenEvictionRunsMillis: 60000
   application:
     name: provider
-  resources:
-    static-locations:  #对外暴露服务的名
     
 server:
   port: 8888
@@ -65,8 +63,6 @@ spring:
     timeBetweenEvictionRunsMillis: 60000
   application:
     name: provider
-  resources:
-    static-locations:  #对外暴露服务的名
     
 server:
   port: 8888
