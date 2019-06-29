@@ -5,8 +5,6 @@ spring:
 ---
 spring:
   profiles: dev  #生产环境
-  
-spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #使用druid数据源
     driver-class-name: com.mysql.jdbc.Driver
@@ -46,9 +44,10 @@ eureka:  #设置eureka注册服务的地址
 ---
 
 spring:
-  profiles: test  #生产环境
+  
   
 spring:
+  profiles: test  #测试环境
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #使用druid数据源
     driver-class-name: com.mysql.jdbc.Driver
