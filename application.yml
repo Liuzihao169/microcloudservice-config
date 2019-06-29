@@ -1,15 +1,15 @@
 spring:
-	profiles:
+  profiles:
 		actives:
-			-dev
+			- dev
 ---
 spring:
 	profiles: dev  #开发环境
-	application:
-		name: microservice-config-dev
+	  application:
+		   name: microservice-config-dev
 
 ---
 spring:
 	profiles: dev  #测试环境
-	application:
-		name: microservice-config-test
+	  application:
+		  name: microservice-config-test
