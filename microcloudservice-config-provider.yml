@@ -7,18 +7,10 @@ spring:
 spring:
   profiles: dev  #生产环境
 
-spring:
-  application:
-    name: provider
-server:
-  port: 8888
-mybatis:        #mybatis基本的配置
-  config-location: classpath:mybatis/mybatis-config.xml
-  mapper-locations:
-    - classpath:mybatis/mapper/DeptMapper.xml
 logging:
   level:
     com.kuake.springcloud.dao: debug #设置指定包下的日志等级 【trace debug info warn error】
+    
 eureka:  #设置eureka注册服务的地址
   client:
     service-url:
