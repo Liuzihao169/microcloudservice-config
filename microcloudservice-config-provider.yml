@@ -7,6 +7,15 @@ spring:
 spring:
   profiles: dev  #生产环境
 
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #使用druid数据源
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/springcloud001
+  application:
+    name: provider
 server:
   port: 8888
 mybatis:        #mybatis基本的配置
