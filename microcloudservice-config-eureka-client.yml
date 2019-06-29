@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev  #生产环境
+
+server:
+  port: 7004 #服务端口名称
+
+eureka:
+  instance:
+    hostname: eureka7004
+#    hostname: localhost # 单机 eureka使用这个服务的名字
+  client:
+    fetch-registry: false # 不用检索服务 自己是注册中心
+    register-with-eureka: false #不向注册中心注册自己
+    service-url:
+      defaultZone:  http://eureka7004:7004/eureka
+        #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
+#     单机版本 defaultZone: http://localhost:${server.port}/eureka
+---
+spring:
+  profiles: test  #生产环境
+server:
+  port: 7005 #服务端口名称
+
+eureka:
+  instance:
+    hostname: eureka7005
+#    hostname: localhost # 单机 eureka使用这个服务的名字
+  client:
+    fetch-registry: false # 不用检索服务 自己是注册中心
+    register-with-eureka: false #不向注册中心注册自己
+    service-url:
+#    集群版本 配置7002 7003eureka服务的地址信息
+      defaultZone:  http://eureka7005:7005/eureka
+        #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
+#     单机版本 defaultZone: http://localhost:${server.port}/eureka
