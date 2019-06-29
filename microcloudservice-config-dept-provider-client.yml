@@ -42,9 +42,6 @@ eureka:  #设置eureka注册服务的地址
     prefer-ip-address: true
     
 ---
-
-spring:
-  
   
 spring:
   profiles: test  #测试环境
